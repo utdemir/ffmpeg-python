@@ -132,6 +132,8 @@ def get_stream_map(stream_spec):
         stream_map = dict(enumerate(stream_spec))
     elif isinstance(stream_spec, dict):
         stream_map = stream_spec
+    else:
+        raise ValueError("Unexpected stream_spec; got {}", type(stream_spec))
     return stream_map
 
 
